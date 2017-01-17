@@ -5,8 +5,10 @@
 
 3. Write a Python class to find the three elements that sum to zero from a set of n real numbers. Take the set values at time of obejct initialization.
 
-4. We want to find out the area of polygons like square, rectangle and triangle. When initializing the polygon user will pass number of sides and size of each side. Each polygon should have a get_area() method which returns the area of the a given polygon. Implement this using the concepts of inheritance.
+4. We want to find out the area of polygons like square, rectangle and triangle. When initializing the polygon user will pass number of sides and size of each side. Each polygon should have a get_area() method which returns the area of the a given polygon. Implement this using the concepts of inheritance. Note Polygon class should be in a seperate module.
 
 5. Write a Python program that take Name and roll-number from console and creates a Student object. User should be able to create multiple students and store them in a list. Provide sorting functionality on this list based on roll-number
 
-6. 
+6. Write a Python class that returns the count of objects of that class created.
+
+7. 
