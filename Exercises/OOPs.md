@@ -11,4 +11,9 @@
 
 6. Write a Python class that returns the count of objects of that class created.
 
-7. 
+7. Create a class that has a list and behaves like stack. It should have a push and pop methods. Size of the stack should be defined at the time of initialization. If user tries to push a number when stack is full show appropriate message, similarly if stack is empty and if user tries to pop a number show appropriate message.
+
+8. Link to this program https://docs.google.com/document/d/1Pls5V7NUuTwdtIYi2hwUAe1orYlSoEJMzGFNNbyi6qE/edit?usp=sharing
+Use class concept for solving this problem.
+
+9.
