@@ -6,7 +6,7 @@ class s:
 		return name
 	def print_String(self,name):
 		self.name=name
-		print("Your Good name is:",self.name)
+		print("Your Good name is:",self.name.upper())
 
 S=s()
 n=S.get_String()
