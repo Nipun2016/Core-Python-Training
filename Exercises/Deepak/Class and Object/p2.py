@@ -13,8 +13,12 @@ class Circle(object):
     def getPerimeter(self):
         return (2*pi*self.radius)
 
-#takes input from User
-radius = int(input("Enter Radius of Circle : "))
-obj = Circle(radius)
-print ("Area of Circle : " , obj.getArea())
-print ("Perimeter of Circle : " , obj.getPerimeter())
+if __name__ == "__main__":
+    try:
+        #takes input from User
+        radius = float(input("Enter Radius of Circle : "))
+        obj = Circle(radius)
+        print ("Area of Circle : " , obj.getArea())
+        print ("Perimeter of Circle : " , obj.getPerimeter())
+    except ValueError:
+        print ("please Insert digit only.")

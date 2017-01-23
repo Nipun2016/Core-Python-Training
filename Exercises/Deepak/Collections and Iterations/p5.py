@@ -1,28 +1,35 @@
-user_input = input("")
-list1 = " ".join(user_input).split()
-#print(list1)
-list2 = []
-flag = 1
+def check_brackets(valid_data_list):
+    counter = 0
+    for i in valid_data_list:
+        if (i == '['):
+            counter += 1
 
-for i in range(0,len(list1)):
-    if(list1[0] == ']'):
-        flag = 0
-        break
-    elif (list1[i] == '['):
-        list2.append('[')
-        #print(list2)
-    elif (list1[i] == ']'):
-        try:
-            list2.remove('[')
-            #print(list2)
-        except ValueError:
-            pass
+        if (i == ']'):
+            counter -= 1
 
-if(flag == 0):
-    print ("Not Ok")
-    exit()
+        if (counter<0):
+            break
 
-if(len(list2) == 0):
-    print ("Ok")
-else:
-    print ("Not Ok")
+    if(counter == 0):
+        return ("Ok")
+    else:
+        return ("Not Ok")
+
+def valid_input(user_input):
+    user_input_list = " ".join(user_input).split()
+    for i in user_input_list:
+        if (i == "[" or i == "]" or i == "{" or i == "}" or i == "(" or i == ")") :
+            continue
+        else:
+            return False
+
+    return user_input_list
+
+if __name__ == "__main__":
+    user_input = input("Enter a string of brackets : ")
+
+    valid_data_list = valid_input(user_input)
+    if not valid_data_list:
+        print ("Please Insert Valid Input.")
+    else:
+        print (check_brackets(valid_data_list))
