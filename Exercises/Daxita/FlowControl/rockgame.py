@@ -1,23 +1,35 @@
-def game():
-	user1 = raw_input("User 1 : ")
-	user2 = raw_input("User 2 : ")
+def game(user1,user2):
 
 	if user1 == "Rock" and user2 == "Scissors" :
-		print "Congratulation User 2 Wins..."
+		return ("Congratulation User 2 Wins...")
 	elif user1 == "Paper" and user2 == "Scissors" :
-		print "Congratulation User 2 Wins..."
+		return ("Congratulation User 2 Wins...")
 	elif user1 == "Scissors" and user2 == "Paper" :
-		print "Congratulation User 1 Wins..."
+		return ("Congratulation User 1 Wins...")
 	elif user1 == "Paper" and user2 == "Rock" :
-		print "Congratulation User 1 Wins..."
+		return ("Congratulation User 1 Wins...")
 	elif user1 == "Rock" and user2 == "Paper" :
-		print "Congratulation User 2 Wins..."
+		return ("Congratulation User 2 Wins...")
 	elif user1 == "Scissors" and user2 == "Rock" :
-		print "Congratulation User 1 Wins..."
+		return ("Congratulation User 1 Wins...")
+	elif user1 == user2:
+		return ("Match Draw")
 	else:
-		print "please enter right choice"
+		return ("please enter right choice")
 	
-	repeat = raw_input("Do you want to Continue (y/n) : ")
+	repeat = input("Do you want to Continue (y/n) : ")
 	if (repeat == "y") or (repeat == 'Y'):
 		game()
-game()
+	else:
+		exit()
+
+if __name__=="__main__":
+	try:
+		user1 = input("User 1 : ")
+		if user1.isalpha():
+			user2 = input("User 2 : ")
+			print(game(user1,user2))
+		else:
+			print("Enter string")
+	except Exception as e:
+		print("Enter valid input")
