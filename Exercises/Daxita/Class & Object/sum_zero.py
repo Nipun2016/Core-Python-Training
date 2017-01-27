@@ -10,5 +10,4 @@ class sum_zero:
 		return self.final
 sz=sum_zero()
 l=([int(a) for a in input('Enter values: ').split()])
-final=sz.compute(l)
-print(final)
+print(sz.compute(l))
