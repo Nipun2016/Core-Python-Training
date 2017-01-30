@@ -1,17 +1,35 @@
-guide = {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"}
-k = guide.keys()
-sm=[]
-flag = 0
-intext = input("Enter the text=").split()
-#print (intext)
-for i in intext:
-    if(i in k):
-        sm.append(guide[i])
-        #print ("swidden message=",sw)
+def convert_data(valid_data):
+    dictinory = {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"}
+    flag = 0
+    outputText = []
+
+    for i in valid_data:
+        if(i in dictinory):
+            outputText.append((dictinory.get(i)))
+        else:
+            flag = 1
+            break
+
+    if (flag == 0):
+        return (" ".join(outputText))
     else:
-        flag = 1
-        break
-if(flag == 0):
-    print ("swidden message="," ".join(sm))
-else:
-    print("oops..... insert valid input......")
+        return ("Please insert valid input")
+
+def valid_input(message):
+    valid_data = message.split()
+
+    for i in valid_data:
+        if not i.isalpha():
+            return False
+        elif len(i) == 0:
+            return False
+        else:
+            return valid_data
+
+if __name__ == "__main__":
+    message = input("Enter String : ")
+    valid_data = valid_input(message)
+    if valid_data is False:
+        print ("Please Insert String only.")
+    else:
+        print (convert_data(valid_data))

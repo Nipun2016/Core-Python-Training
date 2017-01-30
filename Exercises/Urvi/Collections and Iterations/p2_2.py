@@ -1,1 +1,1 @@
-print([len(str(a)) for a in input("Enter the input ").split()])
+print ([len(x) for x in input("Enter Value to list :").split()])
