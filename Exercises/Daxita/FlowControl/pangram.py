@@ -1,19 +1,12 @@
-def pangram():
-	flist=[]
-	str1=raw_input("Enter any sentence for find paramgram or not..")
-	str2=str1.split(' ')
-	print str2
-	str3=''.join(str2)
-	print str3
-	str4=list(str3)
-	print str4
-	for i in str4:
-		if i not in flist:
-			flist.append(i)
-	print flist
-	l=len(flist)
-	if l == 26:
-		print "pangram"
-	else:
-		print "not pangram"
-pangram()
+import string
+
+def panagram(input_string, alphabet=string.ascii_lowercase):
+    alphabet = set(alphabet)
+    return alphabet <= set(input_string.lower())
+
+if __name__ == "__main__":
+    input_data = input("Please Insert String : ")
+    if panagram(input_data):
+        print (input_data," is Panagram")
+    else:
+        print (input_data," is not Panagram")

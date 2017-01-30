@@ -12,7 +12,7 @@ def ceaser_cipher(phrase):
 
 	    new_strs.append("".join(new_word))
 
-	print ("Encrypted Text is:", " ".join(new_strs))
+	return ("Encrypted Text is:", " ".join(new_strs))
 
 
 	new_str = []
@@ -30,6 +30,6 @@ def ceaser_cipher(phrase):
 
 	print ("Decrypted Text is:", " ".join(new_str))
 
-
-phrase=list(input('Enter message: ').split(' '))
-ceaser_cipher(phrase)
+if __name__=="__main__":
+	phrase=list(input('Enter message: ').split(' '))
+	print(ceaser_cipher(phrase))

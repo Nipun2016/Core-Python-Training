@@ -3,11 +3,10 @@ from abc import ABCMeta, abstractmethod
 class Polygon(object):
 
     __metaclass__ = ABCMeta
-    def __init__(self):
-        #self.sides = int(input("Enter The Number Of Sides : "))
-        self.list_size = [int(a) for a in input("Enter Value : ").split()]
+    def __init__(self,sides,list_size):
+        self.sides = sides
+        self.list_size = list_size
 
     @abstractmethod
     def get_area(self):
-        #print ("Deepak")
         pass

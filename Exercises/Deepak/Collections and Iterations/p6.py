@@ -1,7 +1,14 @@
-list1 = [(1,2),(3,4),(5,6,7,8),(5,6,8)]
+def tuple_con_list(t,t1,t2):
+	tupple_list=[t,t1,t2]
+	new_list=[]
+	print("list of tuples: ")
+	return(tupple_list)
 
-for i in list1:
-    if (type(i) == tuple):
-        print (list(i))
-    else:
-        print "Variable is not tuple in list"
+if __name__=="__main__":
+	try:
+		t=1,2,4,56554
+		t1='a','frv','dsfawd'
+		t2='s3de',2,'sadas'
+		print(tuple_con_list(t,t1,t2))
+	except ValueError:
+		print("Value Error")

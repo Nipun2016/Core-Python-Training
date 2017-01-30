@@ -1,5 +1,3 @@
-
-
 1) Given a string and two non-negative interger n and m, we need to get a string consisting of first n number of letters be repeated m numbers of time from the original string. Take input from console.
 
 input 'Chocolate' 2 3 → 'ChChCh' input 'Chocolate' 5 2 → 'ChocoChoco' input 'Abc' 3 0 → ''
@@ -27,4 +25,3 @@ Rock beats scissors Scissors beats paper Paper beats rock
 9) Determine if a sentence is a pangram. Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan gramma, "every letter") is a sentence using every letter of the alphabet at least once. The best known English pangram is "The quick brown fox jumps over the lazy dog." Take input from console only.
 
 10) Write a program that given a phrase can count the occurrences of each word in that phrase. Take input from console only. For example for the input "olly olly in come free" olly: 2 in: 1 come: 1 free: 1
-

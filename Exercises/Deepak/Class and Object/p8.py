@@ -25,10 +25,11 @@ class KinderGarten:
                 break
 
         if(self.flag == 0) :
-            print (self.result)
+            return (self.result)
         else :
-            print (self.error)
+            return (self.error)
 
-enter_Name = input("Enter Name : ")
-obj = KinderGarten(enter_Name)
-obj.calculate_data()
+if __name__ == "__main__":
+    enter_Name = input("Enter Name : ")
+    obj = KinderGarten(enter_Name)
+    print (obj.calculate_data())

@@ -1,11 +1,10 @@
-class Foo(object):
-  counter = 0
-  def __call__(self):
-    Foo.counter += 1
-    return (Foo.counter)
-
-foo = Foo()
-a=foo() 
-a=foo() 
-a=foo()
-print("Object Called : ",a)
+class count(object):
+	counter = 0
+	def __init__(self):
+		count.counter += 1
+		print(count.counter)
+if __name__=="__main__":
+	a = count()
+	a=count() 
+	a=count() 
+	a=count()

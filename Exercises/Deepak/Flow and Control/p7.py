@@ -1,23 +1,26 @@
-def play_game():
-    player = input("Enter your choice from rock/paper/sissor")
-    comp = input("Enter your choice from rock/paper/sissor")
-    if (player == "rock" and comp == "sissor"):
-        print ("congo!.....player win ")
-    elif (player == "sissor" and comp == "rock"):
-        print ("congo!.....comp win")
-    elif (player == "sissor" and comp == "paper"):
-        print ("congo!.....player win")
-    elif (player == "paper" and comp == "sissor"):
-        print ("congo!.....comp win")
-    elif (player == "paper" and comp == "rock"):
-        print ("congo!.....player win")
-    elif (player == "rock" and comp == "paper"):
-        print ("congo!.....comp win")
+def play_game(player,computer):
+    if (player == "rock" and computer == "sissor"):
+        return ("congratulation!.....player win ")
+    elif (player == "sissor" and computer == "rock"):
+        return ("congratulation!.....Computer win")
+    elif (player == "sissor" and computer == "paper"):
+        return ("congratulation!.....player win")
+    elif (player == "paper" and computer == "sissor"):
+        return ("congratulation!.....Computer win")
+    elif (player == "paper" and computer == "rock"):
+        return ("congratulation!.....player win")
+    elif (player == "rock" and computer == "paper"):
+        return ("congratulation!.....Computer win")
+    elif (player == computer):
+        return ("Match Draw..")
     else:
-        print("Enter valid inputs")
+        return("Enter valid Inputs")
 
-    ans = input("Do you want to continue???")
-    if(ans == 'y') or (ans == 'Y'):
-        play_game()
+if __name__ == "__main__":
+    repeat = "y"
 
-play_game()
+    while repeat == "y":
+        player = input("Enter Player choice (rock/paper/sissor) : ")
+        comp = input("Enter Computer choice (rock/paper/sissor) : ")
+        print (play_game(player,comp))
+        repeat = input("Do you want to continue??? (y/n) ")

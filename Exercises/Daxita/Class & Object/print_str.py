@@ -6,8 +6,15 @@ class s:
 		return name
 	def print_String(self,name):
 		self.name=name
-		print("Your Good name is:",self.name)
-
-S=s()
-n=S.get_String()
-S.print_String(n)
+		print("Your Good name is:",self.name.upper())
+if __name__=="__main__":
+	try:
+		S=s()
+		n=S.get_String()
+		print(type(n))
+		if(n.isalpha() and n!="None"):
+			S.print_String(n)
+		else:
+			print("Enter String..")
+	except Exception:
+		print("Enter Valid Input")
